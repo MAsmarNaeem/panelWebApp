@@ -5,18 +5,19 @@ const months = createSlice({
     initialState: [],
     reducers: {
         setMonths: (state, action) => {
-            // let arr = []
-            let months = [...state, action.payload]
-            state.forEach((u)=>{
-                u?.months?.forEach((month)=>{
-                    console.log(month);
-
+            let data = []
+            if (!data.length) {
+                data.push({
+                    year: action.payload.year,
+                    months: action.payload.months.months
                 })
-                // console.log(action.payload);
-            //    console.log(u);
+            }
+            state.forEach((obj) => {
+                if (obj.year !== action.payload.year) {
+                    data.push(obj)
+                }
             })
-            // console.log(arr);
-            return months
+            return data
         }
     }
 })

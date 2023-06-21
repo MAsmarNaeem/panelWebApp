@@ -15,6 +15,8 @@ const YearlyPlan = () => {
     yearsLength,
     setYearsLength,
     MonthsManager,
+    formSubmitH,
+    weeksManager
   } = useYearlyPlan();
   let user = useSelector((store) => store.reducers.authInfo.user);
   let reducers = useSelector((store) => store.reducers);
@@ -101,7 +103,7 @@ const YearlyPlan = () => {
               {reducers.years?.user?.years.map((year, i) => {
                 return (
                   <div key={i}>
-                    <h2>{year}</h2>
+                    <h2 style={{ textAlign: "center" }}>{year}</h2>
                     <Checkpoints
                       title="months"
                       data={months}
@@ -113,26 +115,36 @@ const YearlyPlan = () => {
                 );
               })}
               {
-                <p>
+                <div>
                   {reducers?.months.map((data, i) => {
                     return (
                       <div key={i}>
-                        <p>{data.year}</p>
-                        {data?.month.months.map((months, i) => {
+                        {data?.months.map((month, i) => {
                           return (
                             <div key={i}>
-                              <Checkpoints title="weeks" data={weeks} />
+                              <p className={style.showyear}>
+                                {month} {data.year}
+                              </p>
+                              <Checkpoints
+                                title="weeks"
+                                data={weeks}
+                                onsubmit={(e) => {
+                                  weeksManager(data.year, month, e);
+                                }}
+                              />
                             </div>
                           );
                         })}
                       </div>
                     );
                   })}
-                </p>
+                </div>
               }
             </div>
             <div className={style.btnParent}>
-              <button className={style.addBtn}>Save</button>
+              <button className={style.addBtn} onClick={formSubmitH}>
+                Save
+              </button>
             </div>
           </div>
         ) : null}

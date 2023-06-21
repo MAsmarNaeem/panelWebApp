@@ -9,6 +9,10 @@ body{
 .sidebarParent {
   width: 25%;
 }
+.showyear {
+  margin: 0% !important;
+  text-align: center;
+}
 .tableParent {
   width: 75%;
   padding: 20px;

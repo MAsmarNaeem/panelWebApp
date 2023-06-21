@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const YearlyPlan = () => {
-  let navigation = useNavigate()
+  let navigation = useNavigate();
   let user = useSelector((store) => store.reducers.authInfo.user);
   useEffect(() => {
     if (user !== "tech") {
@@ -53,8 +53,6 @@ const YearlyPlan = () => {
   };
   const submit = (e) => {
     e.preventDefault();
-    // let res = axios.post('/app/add/hrdata' , values)
-    // alert(res)
   };
 
   const [showForm, setShowForm] = useState(true);
