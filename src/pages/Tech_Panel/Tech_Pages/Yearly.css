@@ -1,0 +1,24 @@
+.yearly-plan {
+    display: flex;
+  
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 2rem;
+   
+    justify-content: end;
+  }
+  
+  .dropdowns {
+    display: flex;
+    margin-bottom: 1.5rem;
+  }
+  
+  .table-responsive {
+    overflow-x: auto;
+  }
+  body{
+    background-color: rgb(240, 237, 237) !important;
+  }
+  

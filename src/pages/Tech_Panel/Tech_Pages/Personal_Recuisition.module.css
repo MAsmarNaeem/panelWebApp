@@ -1,0 +1,161 @@
+
+
+.parent {
+  width: 100%;
+  display: flex;
+}
+
+.addBtn1:hover {
+  background-color: #0056b3;
+}
+.addBtn1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  height: 35px;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+}
+
+.btnParent1 {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.SidebarParent {
+  width: 25%;
+}
+.formSection {
+  width: 75%;
+  background-color: #f5f5f5;
+  padding: 30px;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-weight: 700;
+  font-size: 16;
+}
+.form {
+  width: 100%;
+  max-width: 900px;
+}
+
+.formGroup {
+  margin-bottom: 30px;
+}
+
+
+.formGroup > label {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 0.3rem;
+}
+
+.formInput {
+  width: 100%;
+  padding: 20px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 18px;
+  max-height: 10px;
+  outline: 0;
+}
+
+.formSubmitBtn {
+  padding: 10px 40px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.formSubmitBtn:hover {
+  background-color: #0056b3;
+}
+.emp {
+  display: flex;
+  justify-content: center;
+}
+
+.dropdowns {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+.dropdowns > div {
+  flex: 0.3;
+}
+
+.btnParent {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (max-width: 775px) {
+  .SidebarParent {
+    width: 35%;
+  }
+  .formSection {
+    width: 65%;
+  }
+  .dropdowns > div {
+    flex: 1;
+  }
+}
+
+@media (max-width: 550px) {
+  .formGroup {
+    margin-bottom: 20px;
+  }
+  .formSection {
+    padding: 15px;
+  }
+  .parent {
+    flex-direction: column;
+  }
+  .SidebarParent {
+    width: 100%;
+  }
+  .formSection {
+    width: 100%;
+  }
+}
+
+.tableParent {
+  width: 75%;
+  margin-left: 25%;
+}
+
+@media (max-width: 775px) {
+  .tableParent {
+    width: 65%;
+    margin-left: 35%;
+  }
+  
+}
+@media (max-width: 550px) {
+  .tableParent {
+    width: 100%;
+    margin-left: 0%;
+  }
+  
+}

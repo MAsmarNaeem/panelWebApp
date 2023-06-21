@@ -1,0 +1,32 @@
+.parent {
+  display: flex;
+  width: 100%;
+}
+
+.sidebarParent {
+  width: 25%;
+}
+.formParent {
+  width: 75%;
+}
+
+@media (max-width: 775px) {
+  .sidebarParent {
+    width: 35%;
+  }
+  .formParent {
+    width: 65%;
+  }
+}
+
+    @media (max-width: 550px) {
+      .sidebarParent {
+        width: 100%;
+      }
+      .parent {
+        flex-direction: column;
+      }
+      .formParent {
+        width: 100%;
+      }
+    }
