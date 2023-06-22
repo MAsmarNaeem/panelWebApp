@@ -18,7 +18,7 @@ function useSignin() {
     const submit = async (e) => {
         e.preventDefault();
         try {
-            let CheckUser = await axios.post(`${process.env.API_KEY}/auth/check`, values)
+            let CheckUser = await axios.post(`${process.env.REACT_APP_API_KEY}/auth/check`, values)
             dispatch(setUser(CheckUser.data.user))
             if (CheckUser.data.user === 'hr') {
                 navigate('/app/hr/personal_recuisition')
