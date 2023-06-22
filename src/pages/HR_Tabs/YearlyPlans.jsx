@@ -12,11 +12,11 @@ const YearlyPlan = () => {
     showForm,
     setShowForm,
     yearsManager,
-    yearsLength,
-    setYearsLength,
     MonthsManager,
     formSubmitH,
-    weeksManager
+    weeksManager,
+    trainingName,
+    setTrainingName,
   } = useYearlyPlan();
   let user = useSelector((store) => store.reducers.authInfo.user);
   let reducers = useSelector((store) => store.reducers);
@@ -90,6 +90,10 @@ const YearlyPlan = () => {
                 name="trainingname"
                 className={style.formInput}
                 placeholder="Enter the Training Name"
+                onChange={(e) => {
+                  setTrainingName(e.target.value);
+                }}
+                value={trainingName}
               />
             </div>
             <div>
@@ -142,7 +146,7 @@ const YearlyPlan = () => {
               }
             </div>
             <div className={style.btnParent}>
-              <button className={style.addBtn} onClick={formSubmitH}>
+              <button className={style.addBtn} onClick={()=>formSubmitH(trainingName)}>
                 Save
               </button>
             </div>

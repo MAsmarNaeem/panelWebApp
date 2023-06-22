@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { updatePendingEmployees } from "../../store/reducers/pendingEmployees";
 import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 const useQaPortal = () => {
     const dispatch = useDispatch()
     let submit = async (e) => {
-        await axios.post('http://localhost:1000/app/add/qadata', e).then((res) => {
+        await axios.post(`${process.env.API_KEY}/app/add/qadata`, e).then((res) => {
             if (res.data.message === 'ok') {
                 setShowForm(false)
                 alert('Request Send to HR')

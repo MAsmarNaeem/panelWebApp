@@ -9,6 +9,7 @@ import Measuringdevice from './pages/Tech_Panel/Tech_Pages/Measuring_Device'
 import Machinary from './pages/Tech_Panel/Tech_Pages/Machinary';
 import YearlyPlan from './pages/Tech_Panel/Tech_Pages/Yearly';
 import { useEffect } from 'react';
+// require('dotenv').config()
 
 
 function App() {

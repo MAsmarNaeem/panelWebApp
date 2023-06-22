@@ -18,10 +18,14 @@ const months = createSlice({
                 }
             })
             return data
+        },
+        setEmpty: (state, action) => {
+            let data = []
+            return data
         }
     }
 })
 
-export const { setMonths } = months.actions
+export const { setMonths, setEmpty } = months.actions
 
 export default months.reducer

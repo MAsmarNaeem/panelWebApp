@@ -24,7 +24,7 @@ function useHrP1() {
 
 
     const submit = async (e) => {
-        await axios.post('http://localhost:1000/app/add/hrdata', e).then((res) => {
+        await axios.post(`${process.env.API_KEY}/app/add/hrdata`, e).then((res) => {
             if (res.data.message === 'ok') {
                 setShowForm(false)
                 alert('Employee added')
@@ -38,17 +38,17 @@ function useHrP1() {
     const acceptorOrRejector = async (e) => {
         let val = prompt('approve the user', 'yes')
         if (val === 'yes') {
-            axios.post('http://localhost:1000/app/add/hrdata', e).then((res) => {
+            axios.post(`${process.env.API_KEY}/app/add/hrdata`, e).then((res) => {
                 dispatch(updateEmployees(e))
                 dispatch(reduceEmployee(e._id))
                 alert('Employee added')
-                axios.post('http://localhost:1000/app/deleteemployee', { id: e._id }).then(() => {
+                axios.post(`${process.env.API_KEY}/app/deleteemployee`, { id: e._id }).then(() => {
                     setShowForm(false)
                 })
             })
         } else if (val === 'no') {
             dispatch(reduceEmployee(e._id))
-            await axios.post('http://localhost:1000/app/deleteemployee', { id: e._id })
+            await axios.post(`${process.env.API_KEY}/app/deleteemployee`, { id: e._id })
         }
     }
 

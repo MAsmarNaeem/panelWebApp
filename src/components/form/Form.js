@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import style from './form.module.css'
-import axios from 'axios';
 
 function Form(props) {
     const [values, setvalues] = useState({

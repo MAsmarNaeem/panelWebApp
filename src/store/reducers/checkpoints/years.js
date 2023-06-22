@@ -8,10 +8,14 @@ const years = createSlice({
             return {
                 user: action.payload
             }
+        },
+        setEmpty: (state, action) => {
+            let data = []
+            return data
         }
     }
 })
 
-export const { setYears } = years.actions
+export const { setYears , setEmpty} = years.actions
 
 export default years.reducer

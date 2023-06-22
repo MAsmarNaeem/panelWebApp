@@ -3,8 +3,6 @@ import style from './checkpoint.module.css'
 
 function Checkpoints(props) {
     const [checkboxValues, setCheckboxValues] = useState({});
-    let arr = []
-
     const handleCheckboxChange = (event) => {
         const { name, value, checked } = event.target;
         setCheckboxValues((prevValues) => ({

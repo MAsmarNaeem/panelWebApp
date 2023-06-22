@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {  useState } from 'react'
+import { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { setUser } from '../store/reducers/auth';
@@ -18,7 +18,7 @@ function useSignin() {
     const submit = async (e) => {
         e.preventDefault();
         try {
-            let CheckUser = await axios.post('http://localhost:1000/auth/check', values)
+            let CheckUser = await axios.post(`${process.env.API_KEY}/auth/check`, values)
             dispatch(setUser(CheckUser.data.user))
             if (CheckUser.data.user === 'hr') {
                 navigate('/app/hr/personal_recuisition')

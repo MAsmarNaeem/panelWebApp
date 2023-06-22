@@ -20,7 +20,7 @@ function useDevice() {
     };
     const submit = async (e) => {
         e.preventDefault();
-        await axios.post('http://localhost:1000/app/add/device', values).then((res) => {
+        await axios.post(`${process.env.API_KEY}/app/add/device`, values).then((res) => {
             if (res.data.message === 'ok') {
                 setShowForm(false)
                 alert('Device Added')

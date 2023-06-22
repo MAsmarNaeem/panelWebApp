@@ -41,10 +41,14 @@ const weeks = createSlice({
 
 
             return data
+        },
+        setEmpty: (state, action) => {
+            let data = []
+            return data
         }
     }
 })
 
-export const { setWeeks } = weeks.actions
+export const { setWeeks , setEmpty } = weeks.actions
 
 export default weeks.reducer

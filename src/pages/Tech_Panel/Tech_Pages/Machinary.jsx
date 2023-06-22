@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import style from "./Personal_Recuisition.module.css";
 import Tech_sidebar from "../../Tech_Panel/components/Tech_sidebar";
 import { useDispatch, useSelector } from "react-redux";

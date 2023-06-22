@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { updateMachines } from "../../store/reducers/machinary";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
-import getMachines from "../../store/asynsFunctions/getMachines";
 
 function useMachinary() {
     const machines = useSelector((store) => store.reducers.machines)

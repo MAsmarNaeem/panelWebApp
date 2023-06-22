@@ -40,22 +40,6 @@ const YearlyPlan = () => {
     "December",
   ];
 
-  const [values, setvalues] = useState({
-    station: "",
-    jobTitle: "",
-    department: "",
-    section: "",
-    supervisor: "",
-  });
-  const register = (e) => {
-    let inputs = { [e.target.name]: e.target.value };
-    setvalues({ ...values, ...inputs });
-  };
-  const submit = (e) => {
-    e.preventDefault();
-  };
-
-  const [showForm, setShowForm] = useState(true);
   return (
     <div className={style2.parent}>
       <div className={style2.SidebarParent}>
