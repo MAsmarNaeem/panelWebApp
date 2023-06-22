@@ -146,7 +146,10 @@ const YearlyPlan = () => {
               }
             </div>
             <div className={style.btnParent}>
-              <button className={style.addBtn} onClick={()=>formSubmitH(trainingName)}>
+              <button
+                className={style.addBtn}
+                onClick={() => formSubmitH(trainingName)}
+              >
                 Save
               </button>
             </div>
@@ -158,7 +161,7 @@ const YearlyPlan = () => {
           <div className="mb-3">
             <label className="form-label">Select a Year:</label>
             <select className="form-select">
-              <option value="choose...">choose...</option>
+              <option value="">choose...</option>
               <option value="2023">2023</option>
               <option value="2024">2024</option>
               <option value="2024">2025</option>
@@ -167,7 +170,7 @@ const YearlyPlan = () => {
           <div className="mb-3">
             <label className="form-label">Select a Month:</label>
             <select className="form-select">
-              <option value="choose...">choose...</option>
+              <option value="">choose...</option>
               {months.map((month, index) => (
                 <option key={index} value={index + 1}>
                   {month}

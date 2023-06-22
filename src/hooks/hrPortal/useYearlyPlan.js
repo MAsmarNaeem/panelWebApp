@@ -30,7 +30,7 @@ function useYearlyPlan() {
             dispatch(setEmpty3())
             setShowForm(false)
             try {
-                axios.post('http://localhost:1000/app/add/trainentries', { trainingInfo: store.weeks, trainingName: e }).then((res) => {
+                axios.post(`${process.env.REACT_APP_API_KEY}/app/add/trainentries`, { trainingInfo: store.weeks, trainingName: e }).then((res) => {
                     alert('Training Added')
                 })
             } catch (error) {

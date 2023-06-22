@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 const useQaPortal = () => {
     const dispatch = useDispatch()
     let submit = async (e) => {
-        await axios.post(`${process.env.API_KEY}/app/add/qadata`, e).then((res) => {
+        await axios.post(`${process.env.REACT_APP_API_KEY}/app/add/qadata`, e).then((res) => {
             if (res.data.message === 'ok') {
                 setShowForm(false)
                 alert('Request Send to HR')

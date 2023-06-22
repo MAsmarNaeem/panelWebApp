@@ -17,6 +17,7 @@ function useSignin() {
     }
     const submit = async (e) => {
         e.preventDefault();
+        console.log(process.env.REACT_APP_API_KEY);
         try {
             let CheckUser = await axios.post(`${process.env.REACT_APP_API_KEY}/auth/check`, values)
             dispatch(setUser(CheckUser.data.user))
