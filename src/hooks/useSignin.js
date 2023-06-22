@@ -19,7 +19,7 @@ function useSignin() {
         e.preventDefault();
         console.log(process.env.REACT_APP_API_KEY);
         try {
-            let CheckUser = await axios.post(`${process.env.REACT_APP_API_KEY}/auth/check`, values)
+            let CheckUser = await axios.post(`https://onboarding-system-ameen-ansari.vercel.app/auth/check`, values)
             dispatch(setUser(CheckUser.data.user))
             if (CheckUser.data.user === 'hr') {
                 navigate('/app/hr/personal_recuisition')
